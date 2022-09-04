@@ -1,5 +1,5 @@
 
 
-## Images
+## Imagen de referencia
 
-![This is a alt text.](desafiocruce.jpg "This is a sample image.")
+(desafiocruce.jpg "desafio Cruce 2022")
