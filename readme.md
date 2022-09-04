@@ -3,6 +3,12 @@
 
 Desafio desarrollado para https://www.e-cruce.com/
 
+
+### Version online
+
+https://desafiocruce2022.herokuapp.com/
+
+
 ### Criteriors de evaluacion
 
 * Fidelidad al prototipo.
