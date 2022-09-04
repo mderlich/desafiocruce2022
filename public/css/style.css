@@ -1,0 +1,832 @@
+/* Gris: #999999; */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* GOOGLE FONTS :: ROBOTO
+Se aplica en el style.css y en el head.ejs */
+ 
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #FFFFFF;    
+    font-size: 16px;
+    text-align: center;
+    
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+img{
+  width: 100%;
+}
+figure{
+  width: 20%;
+}
+.titulo{
+  text-align: center;
+}
+.botonAgregar , .botonModificar{
+  color: white;
+  background-color: green;
+  padding: 10px;
+  border-radius: 10px;
+}
+.botonBorrar{
+  color: white;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+}
+.botonVolver{
+  color: white;
+  background-color: #00B7FF;
+  padding: 10px;
+  border-radius: 10px;
+}
+.formulario{
+  margin: auto;
+  width: 20%;
+}
+
+
+
+.linea {
+  width: 40px;
+  height: 5px;        
+  border-bottom: 2px solid #C7C8C7;
+  -webkit-transform:
+      rotate(-70deg);
+  position: relative;
+  top: 30px;
+      
+}
+
+.enlace_gris{
+  color: #8C8C8C;
+}
+.enlace_rojo{
+  color: #EC2024;
+  border: 1px solid #EC2024;
+  padding: 3px;
+  position: relative;
+}
+.enlace_negro{
+  color: #000;
+}
+
+.reddot {
+height: 8px;
+width: 8px;
+background-color: #EC2024;
+border-radius: 50%;
+position: absolute;
+}
+
+.rd1{
+  top: 20px;
+  right: -4px;
+}
+.rd2{
+  top: 20px;
+  left: -4px;
+}
+.rd3{
+  top: -4px;
+  left: -4px;
+}
+.rd4{
+  top: -4px;
+  right: -4px;
+}
+
+  .lila{
+      background-color: #7D5992;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 5px;
+      padding-bottom: 5px;
+  
+  }
+
+  .lila_izq{
+      padding-left: 20px;
+  }
+
+  .lila_der{
+      
+      padding-right: 20px;
+      font-weight: bold;
+  }
+
+  .rojo{
+      color: #EC2024;
+      font-weight: bold;
+      font-size: 14px;
+  }
+
+  .gris{
+      color: #8C8C8C;
+  }
+  .contenedorx2{
+
+      display: flex;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+
+  .contenedorx2 ul{
+      display: flex;
+      list-style-type: none;
+  }
+
+  .contenedorx2 li{
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-right: 30px;
+  }
+
+  .contenedorx2_der{
+      display: flex;
+      align-items: center;
+
+      justify-content: space-between;
+
+      
+  }
+
+  .contenedorx2_der div{
+      padding-left: 30px;
+  }
+
+
+  /* ----------------------------------------------- */
+
+  .contenedor_x3{
+      display: none;
+  }
+  .negrita {
+   font-weight: bold;
+   font-size: 16px;
+  }
+
+  li a{
+      color: #000;
+      font-weight: bold;
+  }
+  header{
+      max-width: 1200px;
+      margin: auto;
+  }
+
+  .lupa{
+      position: relative;
+      color: #C7C8C7;
+  }
+  .dotsearch {
+height: 30px;
+width: 30px;
+border: 1px solid #C7C8C7;
+border-radius: 50%;
+
+
+font-size: 15px;
+font-weight: bold;
+color: #C7C8C7;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+position: absolute;
+top: -7px;
+left: -7px;
+
+}
+
+.cart{
+position: relative;
+}
+.cart_number{
+color: #EC2024;
+font-weight: bold;
+
+position: absolute;
+top: 5px;
+right: -10px;
+
+}
+
+.logo_cruce{
+  display: flex;
+  align-items: center;
+  width: 120px;
+}
+
+/* -------------------------------- */
+
+
+.movil{
+  display: block;
+}
+
+.desktop{
+  display: none;
+  
+}
+
+/* MEDIA 360 PX // Navegación en... TABLETS
+------------------------------------------- */
+@media (min-width: 360px) {
+
+
+
+}
+
+/* MEDIA 768 PX // Navegación en... DESKTOP
+------------------------------------------- */
+@media (min-width: 768px) {
+
+  
+.movil{
+  display: none;
+}
+
+.desktop{
+  display: block;
+}
+
+
+.contenedor_x3{
+  visibility: visible;
+display: flex;
+max-width: 700px;
+margin: auto;
+justify-content: space-between;
+}
+.contenedor_x3 i{
+color: #76AE40;
+padding: 20px;
+font-size: 25px;
+}
+.contenedor_x2 {
+display: flex;
+text-align: start;
+align-items: center;
+}
+
+
+}
+
+
+/* ------------ PRODUCTS -------------------- */
+.marcas{
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+/* ------------ COLECCION -------------------- */
+
+.xboton_naranja{
+  background-color: #F36520;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 150px;
+  border: 3px solid #000;
+  border-radius: 7px;
+  box-shadow:5px 5px 0 2px #000;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+.xboton_articulo{
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  width: 120px;
+  border: 2px solid #000;
+  border-radius: 7px;
+  box-shadow:3px 1px 0px 0px #000;
+
+  font-weight: bold;
+  cursor: pointer;
+}
+.xboton_cart{
+  background-color: #fff;
+  color: #75AE41;
+  text-align: center;
+  padding: 10px;
+  width: 50px;
+  border: 2px solid #75AE41;
+  border-radius: 7px;
+
+  font-weight: bold;
+}
+
+.coleccion_titulo{
+  font-size: 50px;
+  margin-bottom: 5px;
+}
+
+
+
+.contenedor{
+  display: flex;    
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+  margin-top: 50px;
+  gap: 50px 30px;    
+}
+
+
+.box{
+  width: 200px;
+  text-align: left;
+}
+
+.box_izq {
+width: 200px;
+margin: auto;
+position: relative;
+}
+
+.dto{
+width: 80px;
+position: absolute;
+left: 5px;
+bottom: 0px;
+}
+
+.texto_lila{
+  color: #7D5992;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.precio{
+  font-weight: bold;
+}
+.precio_tachado{
+  font-weight: normal;
+  text-decoration:line-through;
+  color: #535657;
+
+}
+.precio_rojo{
+  font-weight: bold;
+  color: #EC2024;
+}
+.cuotas{
+  margin-top: 6px;
+  margin-bottom: 4px;
+  color: #535657;
+}
+.cuotas_precio{
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+.informacion{
+  height: 150px;
+}
+
+
+/* ------------ COLECCION 2 -------------------- */
+
+
+.xboton_naranja{
+  background-color: #F36520;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 150px;
+  border: 3px solid #000;
+  border-radius: 7px;
+  box-shadow:5px 5px 0 2px #000;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+.xboton_articulo{
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  width: 120px;
+  border: 2px solid #000;
+  border-radius: 7px;
+  box-shadow:3px 1px 0px 0px #000;
+
+  font-weight: bold;
+}
+.xboton_cart{
+  background-color: #fff;
+  color: #75AE41;
+  text-align: center;
+  padding: 10px;
+  width: 50px;
+  border: 2px solid #75AE41;
+  border-radius: 7px;
+
+  font-weight: bold;
+}
+
+.coleccion_titulo{
+  font-size: 50px;
+  margin-bottom: 5px;
+}
+
+
+/* -------------------------- */
+
+.funko_contenedor{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.contenedor{
+  display: flex;    
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+  margin-top: 50px;
+  gap: 50px 30px;    
+}
+
+
+.box{
+  width: 200px;
+  text-align: left;
+}
+
+.box_izq {
+width: 200px;
+margin: auto;
+position: relative;
+}
+
+.dto{
+width: 80px;
+position: absolute;
+left: 5px;
+bottom: 0px;
+}
+
+.texto_lila{
+  color: #7D5992;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.precio{
+  font-weight: bold;
+}
+.precio_tachado{
+  font-weight: normal;
+  text-decoration:line-through;
+  color: #535657;
+
+}
+.precio_rojo{
+  font-weight: bold;
+  color: #EC2024;
+}
+.cuotas{
+  margin-top: 6px;
+  margin-bottom: 4px;
+  color: #535657;
+}
+.cuotas_precio{
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+.informacion{
+  height: 150px;
+}
+
+
+/* ------------ MARCAS -------------------- */
+
+.titulo_marcas{
+  margin-top: 50px;
+  color: #7D5992;
+  text-align: left;
+  padding-left: 140px;
+}
+.contenedor_marcas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.img_marcas{
+  width: 150px;
+  box-shadow:  2px 5px 6px #ccc;
+  margin: 20px;
+}
+.img_marcas img{
+  width: 100%;
+}
+.dot {
+height: 40px;
+width: 40px;
+border: 1px solid #C7C8C7;
+border-radius: 50%;
+display: inline-block;
+
+font-size: 20px;
+font-weight: bold;
+color: #000;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+/* ------------ NOVEDADES -------------------- */
+.titulo_novedades{
+  margin-top: 50px;
+  color: #000;
+  text-align: left;
+  padding-left: 80px;
+  font-size: 30px;
+  position: relative;
+}
+.ver_todo{
+position: absolute;
+color: #8C8C8C;
+font-size: 15px;
+bottom: 1px;
+}
+
+.centrado_flechas{
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 200px;
+margin: auto;
+margin-top: 20px;
+}
+
+
+/* ------------ MOCHILAS -------------------- */
+
+.juguetedeldia{
+  color: #F36520;
+  font-size: 80px;
+}
+
+.video{
+  max-width: 700px;
+}
+.img1{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.img2{
+  position: absolute;
+  width: 40%;
+  right: 100px;
+  top: 140px;
+}
+
+
+/* ------------ PROMOS -------------------- */
+
+.titulo_termina{
+  margin-top: 50px;
+  color: #4D4E4C;
+  text-align: left;
+  padding-left: 80px;
+  font-size: 30px;
+}
+.titulo_reloj{
+  color: #EC2024;
+  text-align: left;
+  padding-left: 80px;
+  width: 200px;
+
+}
+
+.titulo_reloj h1{
+  margin: 0px;
+
+}
+.tiempo{
+  display: flex;
+  justify-content: space-between;
+  color: #4D4E4C;
+
+}
+.contenedor_marcas{
+  display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 50px;
+}
+.contenedor_dinos{
+  display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+gap: 10px 40px;
+}
+.contenedor_dinos img{
+  width: 100px;
+}
+.info_dinos{
+  text-align: left;
+  width: 150px;
+}
+
+
+/* ------------ RECOMENDAMOS -------------------- */
+
+.titulo_novedades{
+  margin-top: 50px;
+  color: #000;
+  text-align: left;
+  padding-left: 80px;
+  font-size: 30px;
+  position: relative;
+}
+.ver_todo{
+position: absolute;
+color: #8C8C8C;
+font-size: 15px;
+bottom: 1px;
+}
+
+.centrado_flechas{
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 200px;
+margin: auto;
+margin-top: 20px;
+}
+
+
+/* ------------ FOOTER -------------------- */
+
+
+footer {
+  color: #999999;
+}
+
+
+footer .iconoredes {
+  width: 30px;
+}
+
+footer .iconoempresas{
+  height: 60px;
+  width: auto;
+  margin: 20px;
+}
+
+
+
+
+
+.xinput{
+  padding: 10px;
+  border: 2px solid grey;
+  border-radius: 7px;
+}
+
+.xboton{
+  background-color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 120px;
+  border: 3px solid #000;
+  border-radius: 7px;
+  box-shadow:5px 5px 0 2px #000;
+}
+
+.columnatres{
+  color: #000;
+}
+
+.ofertas_left{
+  text-align: left;
+}
+
+
+.columna_contenedor {
+  display: flex;
+  margin: auto;
+  
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+
+}
+
+.columnauno{
+text-align: left;
+margin: 10px;
+
+}
+
+.columnauno div{
+  margin: 5px;
+  height: 50px;
+  line-height: 50px;
+}
+
+
+
+.columnados{
+  text-align: left;
+  margin: 10px;
+}
+.columnados div{
+  margin: 5px;
+  height: 50px;
+  line-height: 50px;
+
+}
+
+
+.contenedor_empresas{
+  margin-bottom: 40px;
+
+}
+
+
+/* BOTON WHATSAPP */
+.floating {
+position: fixed;
+width: 60px;
+height: 60px;
+bottom: 40px;
+right: 40px;
+background-color: #25d366;
+color: #fff;
+border-radius: 50px;
+text-align: center;
+font-size: 30px;
+box-shadow: 2px 2px 3px #999;
+z-index: 100;
+}
+
+.fab-icon {
+margin-top: 16px;
+}
+/* ----------------- */
+
+
+/* SCROLL TO TOP */
+
+.medioCirculo {
+          position: fixed;
+          left: 50%;
+          bottom: -50px;
+          transform: translate(-50%, -50%);
+          height: 100px;
+          width: 200px;
+          border-radius: 150px 150px 0 0;
+          
+          background-color: #FDB712;
+          color: #000000;
+
+          padding-top: 30px;
+          line-height: 1.6;
+          
+      }
+
+      .medioCirculo:hover {
+          
+          transition: 0.3s;
+          background-color: #000000;
+          color: #FDB712;
+          cursor: pointer;
+          
+      }
+
+  /* ------------------------ */

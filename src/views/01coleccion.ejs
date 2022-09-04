@@ -1,0 +1,92 @@
+
+<h1 class="coleccion_titulo">Llego el invierno, encontralo antes que nadie</h1>
+<h2 >La colección mas completa de Game of Thrones está en X</h2>
+<br>
+
+<a href="/products">
+ <button class="xboton_naranja">Ver colección</button>
+</a>
+
+
+
+<div class="contenedor">
+    
+ <% for(let i=0; i< productDetail.length ; i++) { %>
+    
+    <div class="box">
+
+        <a href="/products">
+        <div class="box_izq">
+            <img src="/img/productos/<%= productDetail[i].img %>.png" >
+            <% 
+            /* ------------------------------- */
+            function numberWithCommas(x) {
+                return Intl.NumberFormat('de-DE').format(x);
+            }
+            /* ------------------------------- */
+            let precio_dto;
+
+            if (productDetail[i].descuento > 0) { 
+            
+                
+                precio_finaldto = productDetail[i].precio - (( productDetail[i].descuento / 100 ) * productDetail[i].precio);
+                precio_dto = precio_finaldto / 6;
+            
+            %>
+            <img src="/img/dto.png" class="dto">
+            <% } else {
+                precio_dto = productDetail[i].precio / 6;
+            }%>
+        </div>
+        </a>
+        
+        <div class="informacion">
+            <span class="texto_lila"><%= productDetail[i].categoria %></span>
+            <br>
+            <%= productDetail[i].nombre %>
+
+            
+            <div class="cuotas">
+                <% if ( productDetail[i].stock > 0 ) { %>
+                6 Cuotas s/interés de 
+                <br>
+                <span class="cuotas_precio">$<%= numberWithCommas(precio_dto) %></span> 
+                <% } %>
+            </div>
+            
+
+            Final: 
+            <%
+            /* si tiene descuento */
+            if (productDetail[i].descuento > 0 && productDetail[i].stock > 0 ) {             
+            %>
+
+            <span class="precio_tachado">$<%= numberWithCommas(productDetail[i].precio) %></span>
+            <span class="precio_rojo">$<%= numberWithCommas(precio_finaldto) %></span>
+            
+            <% } else if (productDetail[i].descuento == 0 && productDetail[i].stock > 0) {
+                precio_dto = productDetail[i].precio / 6;
+            %>
+            <span class="precio">$<%= numberWithCommas(productDetail[i].precio) %></span>
+            <% } else { %>
+                <span class="precio_rojo">Artículo sin stock</span>
+            <% } %>
+             
+
+            
+        </div>
+
+        <div>
+             
+            <button class="xboton_cart"><i class="fas fa-shopping-cart cart"></i> </button> 
+            <a href="/products">
+            <button class="xboton_articulo">Ver artículo</button> 
+            </a>
+        </div>
+
+    </div>
+    
+<% } %>
+
+
+</div>

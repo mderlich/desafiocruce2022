@@ -1,0 +1,97 @@
+<!-- 
+lila    7D5992
+ -->
+<style>
+.titulo_masbuscado{
+    margin-top: 50px;
+    color: #76AE40;
+    text-align: left;
+    padding-left: 80px;
+    font-size: 30px;
+}
+.contenedor_marcas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.contenedor_dinos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 40px;
+}
+.contenedor_dinos img{
+    width: 100px;
+}
+.info_dinos{
+    text-align: left;
+    width: 150px;
+}
+
+</style>
+
+
+
+<br>
+<div>
+    <h2 class="titulo_masbuscado">Lo más buscado</h2>
+</div>
+<br>
+
+<div class="contenedor_marcas">
+    <!--  -->
+
+    
+
+
+
+    <div class="contenedor_dinos">
+
+    <% 
+            /* ------------------------------- */
+            function numberWithCommas(x) {
+                return Intl.NumberFormat('de-DE').format(x);
+            }
+            /* ------------------------------- */
+
+        for(let i=0; i< productDinos.length ; i++) { %>
+
+        
+        <div class="info_dinos">
+            <img src="/img/productos/<%= productDinos[i].img %>" alt="<%= productDinos[i].nombre %>">
+
+            <%= productDinos[i].nombre %>
+            <br>
+            <% if ( productDinos[i].descuento > 0 ) { 
+                            
+                precio_finaldto = productDinos[i].precio - (( productDinos[i].descuento / 100 ) * productDinos[i].precio);
+                precio_dto = precio_finaldto / 6;
+
+            %>
+                <span class="precio_tachado">$<%= numberWithCommas(productDinos[i].precio) %></span>
+                <br>
+                <span class="precio_rojo">$<%= numberWithCommas(precio_finaldto) %></span>
+            <% } else {%>
+            <br>
+            <span class="precio">$<%= numberWithCommas(productDinos[i].precio) %></span>
+            <%  } %>
+        </div>
+
+    <% } %>
+    
+    </div>
+
+    
+
+    
+    <!--  -->
+</div>
+
+
+
+
+
+
+

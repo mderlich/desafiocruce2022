@@ -1,0 +1,44 @@
+
+[
+    {
+        "id": 1,
+        "categoria": "Dinosaurios",
+        "nombre": "Dinosaurio robot para armar",
+        "precio": 1500,
+        "img": "dino1.png",
+        "descuento": 10
+    },
+    {
+        "id": 2,
+        "categoria": "Dinosaurios",
+        "nombre": "Mochila de ToyStory Dinosaurio Rex",
+        "precio": 2580,
+        "img": "dino2.png",
+        "descuento": 0
+    },
+    {
+        "id": 3,
+        "categoria": "Dinosaurios",
+        "nombre": "Dinosaurio robot",
+        "precio": 1500,
+        "img": "dino1.png",
+        "descuento": 10
+    },
+    {
+        "id": 4,
+        "categoria": "Dinosaurios",
+        "nombre": "Mochila de ToyStory Dinosaurio Rex",
+        "precio": 2580,
+        "img": "dino2.png",
+        "descuento": 0
+    },
+    {
+        "id": 5,
+        "categoria": "Dinosaurios",
+        "nombre": "Dinosaurio robot para armar",
+        "precio": 1500,
+        "img": "dino1.png",
+        "descuento": 10
+    }
+    
+]

@@ -1,0 +1,95 @@
+
+
+
+    <div class="contenedor">
+        
+        
+        <div class="video">
+            
+            <div class="img1">
+                <img src="/img/mochilas.png" alt="" >
+                <img src="/img/mochilas2.png" alt="" class="img2">
+            </div>
+            
+              
+              
+        </div>
+
+
+           <div class="box">
+       
+               <div class="box_izq">
+                <img src="/img/productos/<%= productMochila.img %>.png" >
+                   <% 
+                   /* ------------------------------- */
+                   function numberWithCommas(x) {
+                       return Intl.NumberFormat('de-DE').format(x);
+                   }
+                   /* ------------------------------- */
+                   let precio_dto;
+       
+                   if (productMochila.descuento > 0) { 
+                   
+                       
+                       precio_finaldto = productMochila.precio - (( productMochila.descuento / 100 ) * productMochila.precio);
+                       precio_dto = precio_finaldto / 6;
+                   
+                   %>
+                   <img src="/img/dto.png" class="dto">
+                   <% } else {
+                       precio_dto = productMochila.precio / 6;
+                   }%>
+               </div>
+               
+               <div class="informacion">
+                   <span class="texto_lila"><%= productMochila.categoria %></span>
+                   <br>
+                   <%= productMochila.nombre %>
+       
+                   
+                   <div class="cuotas">
+                       <% if ( productMochila.stock > 0 ) { %>
+                       6 Cuotas s/interés de 
+                       <br>
+                       <span class="cuotas_precio">$<%= numberWithCommas(precio_dto) %></span> 
+                       <% } %>
+                   </div>
+                   
+       
+                   Final: 
+                   <%
+                   /* si tiene descuento */
+                   if (productMochila.descuento > 0 && productMochila.stock > 0 ) {             
+                   %>
+       
+                   <span class="precio_tachado">$<%= numberWithCommas(productMochila.precio) %></span>
+                   <span class="precio_rojo">$<%= numberWithCommas(precio_finaldto) %></span>
+                   
+                   <% } else if (productMochila.descuento == 0 && productMochila.stock > 0) {
+                       precio_dto = productMochila.precio / 6;
+                   %>
+                   <span class="precio">$<%= numberWithCommas(productMochila.precio) %></span>
+                   <% } else { %>
+                       <span class="precio_rojo">Artículo sin stock</span>
+                   <% } %>
+                    
+       
+                   
+               </div>
+       
+               <div>
+                    
+                   <button class="xboton_cart"><i class="fas fa-shopping-cart cart"></i> </button> 
+                   <button class="xboton_articulo">Ver artículo</button> 
+               </div>
+       
+           </div>
+           
+
+       
+       </div>
+    
+    
+    
+    
+    

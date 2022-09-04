@@ -1,0 +1,21 @@
+AUTOR
+////////////////////////////
+Matias Derlich
+https://www.linkedin.com/in/ingmderlich/
+
+
+¿Como iniciar?
+////////////////////////////
+En linea de comandos aplicar... 
+npm install
+
+
+
+¿Como ingresar?
+////////////////////////////
+Se ingresa por la siguiente direccion...
+Index
+http://localhost:3000/
+
+Products
+http://localhost:3000/products

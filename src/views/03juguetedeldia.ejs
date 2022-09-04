@@ -1,0 +1,101 @@
+<!-- 
+naranja     F36520
+ -->
+
+ <style>
+.juguetedeldia{
+    color: #F36520;
+    font-size: 80px;
+}
+
+.video{
+    max-width: 700px;
+}
+
+ </style>
+ <h1 class="juguetedeldia">Juguete del día</h1>
+
+ 
+<div class="contenedor">
+    
+       
+       <div class="box">
+   
+           <div class="box_izq">
+            <img src="/img/productos/<%= productDay.img %>.png" >
+               <% 
+               /* ------------------------------- */
+               function numberWithCommas(x) {
+                   return Intl.NumberFormat('de-DE').format(x);
+               }
+               /* ------------------------------- */
+               let precio_dto;
+   
+               if (productDay.descuento > 0) { 
+               
+                   
+                   precio_finaldto = productDay.precio - (( productDay.descuento / 100 ) * productDay.precio);
+                   precio_dto = precio_finaldto / 6;
+               
+               %>
+               <img src="/img/dto.png" class="dto">
+               <% } else {
+                   precio_dto = productDay.precio / 6;
+               }%>
+           </div>
+           
+           <div class="informacion">
+               <span class="texto_lila"><%= productDay.categoria %></span>
+               <br>
+               <%= productDay.nombre %>
+   
+               
+               <div class="cuotas">
+                   <% if ( productDay.stock > 0 ) { %>
+                   6 Cuotas s/interés de 
+                   <br>
+                   <span class="cuotas_precio">$<%= numberWithCommas(precio_dto) %></span> 
+                   <% } %>
+               </div>
+               
+   
+               Final: 
+               <%
+               /* si tiene descuento */
+               if (productDay.descuento > 0 && productDay.stock > 0 ) {             
+               %>
+   
+               <span class="precio_tachado">$<%= numberWithCommas(productDay.precio) %></span>
+               <span class="precio_rojo">$<%= numberWithCommas(precio_finaldto) %></span>
+               
+               <% } else if (productDay.descuento == 0 && productDay.stock > 0) {
+                   precio_dto = productDay.precio / 6;
+               %>
+               <span class="precio">$<%= numberWithCommas(productDay.precio) %></span>
+               <% } else { %>
+                   <span class="precio_rojo">Artículo sin stock</span>
+               <% } %>
+                
+   
+               
+           </div>
+   
+           <div>
+                
+               <button class="xboton_cart"><i class="fas fa-shopping-cart cart"></i> </button> 
+               <button class="xboton_articulo">Ver artículo</button> 
+           </div>
+   
+       </div>
+       
+       <div class="video">
+    <video width="100%" height="auto" controls>
+        <source src="/video/funko.mp4" type="video/mp4">
+      </video> 
+</div>
+   
+   </div>
+
+
+
+

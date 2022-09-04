@@ -1,0 +1,77 @@
+
+    
+    
+    
+    <br>
+    <div>
+        <h2 class="titulo_termina">Termina en:</h2>
+        <div class="titulo_reloj">
+            <h1 >23:03:04</h1>
+
+            <div class="tiempo">
+                <div>HS</div>
+                <div>min</div>
+                <div>seg</div>
+            </div>
+
+            
+        </div>
+        
+    </div>
+    <br>
+    
+    <div class="contenedor_marcas">
+        <!--  -->
+    
+        
+    
+    
+    
+        <div class="contenedor_dinos">
+    
+        <% 
+                /* ------------------------------- */
+                function numberWithCommas(x) {
+                    return Intl.NumberFormat('de-DE').format(x);
+                }
+                /* ------------------------------- */
+    
+            for(let i=0; i< productDinos.length ; i++) { %>
+    
+    
+            <div class="info_dinos">
+                
+            <img src="/img/productos/<%= productDinos[i].img %>" alt="<%= productDinos[i].nombre %>">
+                <%= productDinos[i].nombre %>
+                <br>
+                <% if ( productDinos[i].descuento > 0 ) { 
+                                
+                    precio_finaldto = productDinos[i].precio - (( productDinos[i].descuento / 100 ) * productDinos[i].precio);
+                    precio_dto = precio_finaldto / 6;
+    
+                %>
+                    <span class="precio_tachado">$<%= numberWithCommas(productDinos[i].precio) %></span>
+                    <br>
+                    <span class="precio_rojo">$<%= numberWithCommas(precio_finaldto) %></span>
+                <% } else {%>
+                <br>
+                <span class="precio">$<%= numberWithCommas(productDinos[i].precio) %></span>
+                <%  } %>
+            </div>
+    
+        <% } %>
+        </div>
+    
+        
+    
+        
+        <!--  -->
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
